@@ -1,5 +1,14 @@
-# implementation of card game - Memory
+"""
+Author: Shahzeb Siddiqui
+Date: 04/26/2014
+Description - This is a version of a the Card Memory game. The game contains 16 cards with two sets of pairs from values 
+              0-8. The objective of the game is to find the paired cards while they are hidden. Two cards are selected face
+              up every turn and if they are a match, then they remain faceup otherwise they are hidden again. The goal is to
+              find all 8 pairs of cards in the minimum number of turns. 
 
+Note: This code works with codeskulptor.org and will not work with tradition Python compiler because it uses library simplegui
+      which is a custom made library
+"""
 import simplegui
 import random
 
@@ -22,8 +31,6 @@ def new_game():
     exposedcards = []
     for i in range(16):
         exposedcards.append("False")
-    
-    #exposedcards[1] = "True"
      
 # define event handlers
 def mouseclick(pos):
@@ -84,10 +91,10 @@ label = frame.add_label("Turns = 0")
 frame.set_mouseclick_handler(mouseclick)
 frame.set_draw_handler(draw)
 
-# get things rolling
+# start frame and game
 new_game()
 frame.start()
 
 
 
-# Always remember to review the grading rubric
+
